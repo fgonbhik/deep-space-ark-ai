@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#04110d" />
+  <meta name="description" content="ARES V8.1 可解释自主生存决策数字孪生：火星基地世界模型、反事实推演、人类授权与执行审计。" />
+  <title>ARES V8.1 // Extreme Autonomy OS</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="boot" class="boot" role="status" aria-live="polite">
+    <div class="boot-mark"><i></i></div>
+    <strong>ARES // WORLD MODEL</strong>
+    <span id="bootText">正在构建 Jezero 火星基地数字孪生…</span>
+    <div class="boot-track"><i id="bootBar"></i></div>
+  </div>
+
+  <main id="app" class="app" data-phase="0">
+    <div class="scanlines"></div>
+    <header class="topbar">
+      <button class="brand" data-action="reset" aria-label="回到世界模型">
+        <span class="brand-mark"><i></i></span>
+        <span><b>ARES // EXTREME AUTONOMY OS</b><small>可解释自主生存决策数字孪生</small></span>
+      </button>
+      <nav class="tabs" aria-label="系统模块">
+        <button class="active" data-mode="world">世界模型</button>
+        <button data-mode="causal">因果网络</button>
+        <button data-mode="future">未来推演</button>
+        <button data-mode="execute">自主执行</button>
+      </nav>
+      <div class="kernel"><i></i><b>PYTHON LIVE</b><span id="latency">6 ms</span><time id="clock">SOL 0427 · LMST 17:54:04</time></div>
+    </header>
+
+    <section class="mission-head">
+      <div>
+        <small>COMPETITION EDITION · V8.1 / PAIRED COUNTERFACTUAL</small>
+        <h1>证明 ARES 何时该行动，何时不该行动</h1>
+      </div>
+      <ol class="mission-steps" id="steps">
+        <li class="active"><b>01</b><span>感知</span></li>
+        <li><b>02</b><span>异常</span></li>
+        <li><b>03</b><span>推演</span></li>
+        <li><b>04</b><span>决策</span></li>
+        <li><b>05</b><span>授权</span></li>
+        <li><b>06</b><span>验证</span></li>
+      </ol>
+      <button class="demo-button" data-action="demo">
+        <span class="play">▶</span><span><b id="demoLabel">启动 60 秒获奖演示</b><small>自动展示控制组 · 策略 · 结果 · 证据</small></span><em>PROOF</em>
+      </button>
+    </section>
+
+    <section class="metrics" aria-label="基地核心指标">
+      <article><span>基地生存概率</span><div><b data-metric="survival">95.1</b><small>%</small></div><i><em data-bar="survival"></em></i></article>
+      <article><span>电池荷电状态 SOC</span><div><b data-metric="soc">66.1</b><small>%</small></div><i><em data-bar="soc"></em></i></article>
+      <article><span>氧气安全倍率</span><div><b data-metric="oxygen">88.4</b><small>%</small></div><i><em data-bar="oxygen"></em></i></article>
+      <article><span>水循环储备</span><div><b data-metric="water">71.8</b><small>%</small></div><i><em data-bar="water"></em></i></article>
+      <article class="risk"><span>决策风险指数</span><div><b data-metric="risk">10</b></div><small id="riskText">安全运行</small></article>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel sensor-panel">
+        <header class="panel-title"><b>01</b><h2>异常感知与证据来源</h2><i></i></header>
+        <article class="fusion">
+          <small>23× SENSOR FUSION</small>
+          <div><b id="fusionTitle">原始基线已建立</b><strong id="anomaly">0.08</strong></div>
+          <em id="fusionSub">23 路状态量已同步 · 遥测置信度 0.96</em>
+        </article>
+        <div class="sensor-grid">
+          <article><span>地表温度</span><b id="temperature">−34.9°</b><small>CELSIUS</small></article>
+          <article><span>辐射剂量率</span><b id="radiation">0.010</b><small>mSv / h</small></article>
+          <article><span>风速</span><b id="wind">22.0</b><small>m / h</small></article>
+          <article><span>能见度</span><b id="visibility">85.2</b><small>%</small></article>
+        </div>
+        <article class="forecast">
+          <div><span>未来 24h 光学厚度预测</span><b id="tau">τ 0.42</b></div>
+          <div class="bars" id="forecastBars"></div>
+          <footer><span>NOW</span><span>+8h</span><span>+16h</span><span>+24h</span></footer>
+        </article>
+        <button class="inject" data-action="inject"><span>⚠</span><span><b>注入 G4 沙尘暴</b><small>生成可重复异常测试样本</small></span><em>INJECT</em></button>
+        <header class="panel-title mini"><b>02</b><h2>受影响系统</h2><i></i></header>
+        <ul class="systems">
+          <li><i class="green"></i><span><b>居住舱</b><small>HAB-01</small></span><strong id="hab">72%</strong></li>
+          <li><i class="orange"></i><span><b>生命舱</b><small>BIO-02</small></span><strong id="bio">54%</strong></li>
+          <li><i class="cyan"></i><span><b>能源阵列</b><small>PWR-04</small></span><strong id="power">66%</strong></li>
+        </ul>
+      </aside>
+
+      <section class="world-panel">
+        <header class="world-top">
+          <div><small>ARES // PHYSICS-LINKED WORLD MODEL</small><b id="sceneLabel">基线数字孪生 · JEZERO DELTA</b></div>
+          <div class="view-tools">
+            <button data-camera="orbit">轨道</button>
+            <button data-camera="rover">近景</button>
+            <button data-action="proof">对照</button>
+            <button data-action="recalibrate">重校</button>
+            <button class="active" data-quality="high">高质</button>
+            <button data-quality="low">流畅</button>
+            <button data-action="zoom-in">＋</button>
+            <button data-action="zoom-out">−</button>
+          </div>
+        </header>
+        <div class="world-status">
+          <span><i></i> NASA OPEN-ASSET REFERENCE · PHYSICS LINKED · GPU BALANCED</span>
+          <small id="worldTime">LMST 17:54:04</small>
+        </div>
+        <canvas id="marsCanvas" aria-label="可交互的火星基地三维数字孪生"></canvas>
+        <div class="viewport-glow"></div>
+        <div class="base-hud">
+          <span>沙尘 τ <b id="hudTau">0.42</b></span>
+          <span>光伏 <b id="hudSolar">10 kW</b></span>
+          <span>电池 SOC <b id="hudSoc">66.1%</b></span>
+        </div>
+        <article class="world-callout">
+          <small id="calloutNo">01 · SENSE</small>
+          <b id="calloutTitle">基线运行稳定</b>
+          <span id="calloutText">世界模型与遥测对齐，当前沙尘厚度 τ=0.42。</span>
+        </article>
+
+        <section id="modeOverlay" class="mode-overlay" aria-live="polite">
+          <button data-action="close-overlay" aria-label="关闭">×</button>
+          <div id="modeContent"></div>
+        </section>
+
+        <footer class="world-footer">
+          <div><i></i><span>NASA PANORAMA REFERENCES</span><b>2 / 2</b></div>
+          <div><span>23 路传感器</span><span>5 个 NASA 源</span><span>12 台自主机器人</span></div>
+          <strong>点击 3D 实体 · P 旋转 · 1–4 视角</strong>
+        </footer>
+        <section class="trend">
+          <header><span>因果预测：动态滚动序列</span><b id="tick">PYTHON TICK 0036</b></header>
+          <svg id="trendChart" viewBox="0 0 900 120" preserveAspectRatio="none" aria-label="资源预测折线图"></svg>
+        </section>
+      </section>
+
+      <aside class="panel audit-panel">
+        <header class="panel-title"><b>03</b><h2>AI 决策解释与审计</h2><i></i></header>
+        <article class="recommendation">
+          <small>当前建议</small>
+          <div><b id="decision">等待异常</b><strong id="safetyTarget">—</strong></div>
+          <footer><span>DECISION</span><span>模型内安全达标</span></footer>
+        </article>
+        <article class="why">
+          <small>WHY THIS ACTION?</small>
+          <b id="whyTitle">尚未触发策略选择</b>
+          <p id="whyText">系统会显示推荐理由、约束条件与被拒绝方案，而不是只给出一个答案。</p>
+        </article>
+        <div class="policy-table">
+          <header><span>候选策略</span><span>安全达标</span><span>SOC P10</span><span>任务能源</span></header>
+          <button data-policy="monitor"><b>监测</b><span>—</span><span>—</span><span>—</span></button>
+          <button data-policy="shed"><b>均衡</b><span>100.0%</span><span>42.1%</span><span>58.5%</span></button>
+          <button data-policy="survive"><b>生存</b><span>100.0%</span><span>69.8%</span><span>37.7%</span></button>
+          <button data-policy="expand"><b>扩张</b><span>0.0%</span><span>4.4%</span><span>53.6%</span></button>
+        </div>
+        <article class="boundary">
+          <small>DECISION BOUNDARY · CLICK TO LOAD</small>
+          <b id="boundaryTitle">点击任一策略加载完整审计证据</b>
+          <div><span><i></i>监测</span><span><i></i>均衡</span><span><i></i>生存</span><span><i></i>扩张</span></div>
+        </article>
+        <article class="matrix">
+          <small>立即进入风暴场景占比</small>
+          <div id="matrixGrid"></div>
+          <footer><b>均衡策略</b><span>安全 100.0% · SOC P10 42.1%</span></footer>
+        </article>
+        <div class="audit-actions">
+          <button data-action="proof">实验证据</button>
+          <button data-action="authorize">请求授权</button>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="statusbar">
+      <div><i id="statusDot"></i><b id="statusName">NOMINAL</b><span>自主闭环在线</span></div>
+      <p><small>DECISION AUDIT TRAIL</small><span id="auditTrail">[T+00:41] PWR · 光伏输出 10 kW，供电网络保持稳定</span></p>
+      <div class="footer-tools"><button data-action="proof">父级对照</button><button data-mode="future">模型推演</button><button data-action="authorize">演示授权</button></div>
+    </footer>
+  </main>
+
+  <dialog id="proofDialog" class="evidence-dialog">
+    <form method="dialog"><button aria-label="关闭">×</button></form>
+    <header><small>PAIRED CONTROL EXPERIMENT</small><h2>共同硬件联锁；唯一差异是负载调度、裂变爬升与清尘策略</h2><span>SEED 1176 · 600 PAIRS</span></header>
+    <div class="proof-grid">
+      <article class="control">
+        <small>CONTROL · 保留共同硬件联锁</small><h3>仅基础联锁 · 无 ARES 高层调度</h3>
+        <div><span>安全达标 <b>0.0%</b></span><span>SOC P10 <b>0.0%</b></span><span>关键服务 P10 <b>83.5%</b></span><span>跌破 20% 中位时间 <b>约 8.0h</b></span></div>
+        <footer>仅基础联锁未满足统一安全约束</footer>
+      </article>
+      <section class="lift"><small>ARES 净贡献</small><b>+100.0 pp</b><strong>安全达标率</strong><b>+42.1 pp</b><strong>SOC P10</strong><em>600 / 600</em><span>避免约束失败</span></section>
+      <article class="treatment">
+        <small>TREATMENT · 同一 600 组场景</small><h3>ARES · 均衡策略</h3>
+        <div><span>安全达标 <b>100.0%</b></span><span>SOC P10 <b>42.1%</b></span><span>任务能源交付 <b>58.5%</b></span><span>95% 区间 <b>99.4–100.0%</b></span></div>
+        <footer>满足统一安全约束并最大化任务能源交付</footer>
+      </article>
+    </div>
+    <svg id="proofChart" viewBox="0 0 1000 130" preserveAspectRatio="none"></svg>
+    <p><b>在 600 组完全配对的模型场景中，推荐策略减少 600 次安全约束失败。</b><span>模型内配对对照，不代表真实任务认证概率。</span></p>
+  </dialog>
+
+  <dialog id="authDialog" class="auth-dialog">
+    <form method="dialog"><button aria-label="关闭">×</button></form>
+    <header><small>HUMAN AUTHORIZATION REQUIRED</small><h2 id="authTitle">均衡策略等待人类授权</h2><span>DEC-0004 · WORLD LOCKED</span></header>
+    <div class="auth-compare"><article><small>预测 · 未来 48h</small><b>安全 100.0% · SOC P10 42.1%</b></article><i>→</i><article><small>实测 · T+<span id="authTime">0.0s</span></small><b id="authResult">0/3 完成 · 净功率 −102.6 kW</b></article></div>
+    <div class="auth-progress"><b id="authCount">0 / 3 行动完成</b><span id="netPower">净功率 −102.6 kW</span><i><em id="authBar"></em></i></div>
+    <p id="authMessage">授权后按顺序执行：非关键负载冻结、裂变电源爬升、机器人清尘。</p>
+    <div class="auth-steps">
+      <article><i>01</i><span><b>冻结非关键负载</b><small>保留生命保障与通信链路</small></span></article>
+      <article><i>02</i><span><b>裂变电源爬升</b><small>限制热应力与燃料消耗</small></span></article>
+      <article><i>03</i><span><b>清尘机器人出动</b><small>恢复光伏阵列有效面积</small></span></article>
+    </div>
+    <button id="authorizeButton" class="authorize-button" data-action="confirm-auth">确认人类授权并执行</button>
+  </dialog>
+
+  <noscript>ARES 需要 JavaScript 来运行 3D 世界模型与交互式推演。</noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
